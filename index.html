@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mochi Sweety</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: #4a3b42;
+
+            background:
+                linear-gradient(135deg, #ffeef5 25%, transparent 25%) -20px 0/80px 80px,
+                linear-gradient(225deg, #f8dce8 25%, transparent 25%) -20px 0/80px 80px,
+                linear-gradient(315deg, #ffeef5 25%, transparent 25%) 0 0/80px 80px,
+                linear-gradient(45deg, #f8dce8 25%, #fff7fa 25%) 0 0/80px 80px;
+        }
+
+        .container {
+            max-width: 700px;
+            margin: auto;
+            padding: 25px 35px;
+            background: rgba(255, 255, 255, 0.55);
+            min-height: 100vh;
+        }
+
+        /* =========================
+           LOGO MOCHI
+        ========================= */
+
+        .logo {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .mochi-logo {
+            position: relative;
+            width: 105px;
+            height: 90px;
+            margin: 0 auto 12px;
+            background: linear-gradient(
+                145deg,
+                #ffd1e2,
+                #f59cbe
+            );
+            border-radius: 45% 45% 40% 40%;
+            box-shadow:
+                0 8px 18px rgba(210, 100, 145, 0.25),
+                inset 0 5px 10px rgba(255,255,255,0.55);
+        }
+
+        /* Pipi mochi */
+        .mochi-logo::before,
+        .mochi-logo::after {
+            content: "";
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background: #8f526b;
+            border-radius: 50%;
+            top: 39px;
+        }
+
+        .mochi-logo::before {
+            left: 31px;
+        }
+
+        .mochi-logo::after {
+            right: 31px;
+        }
+
+        /* Mulut */
+        .mouth {
+            position: absolute;
+            width: 18px;
+            height: 9px;
+            border-bottom: 3px solid #8f526b;
+            border-radius: 50%;
+            left: 44px;
+            top: 51px;
+        }
+
+        /* Pipi */
+        .blush {
+            position: absolute;
+            width: 18px;
+            height: 8px;
+            background: #ee7fa9;
+            border-radius: 50%;
+            top: 54px;
+            opacity: 0.65;
+        }
+
+        .blush.left {
+            left: 17px;
+        }
+
+        .blush.right {
+            right: 17px;
+        }
+
+        /* Daun / topping kecil */
+        .leaf {
+            position: absolute;
+            width: 25px;
+            height: 12px;
+            background: #f6b4ca;
+            border-radius: 100% 0 100% 0;
+            top: -7px;
+            right: 18px;
+            transform: rotate(-25deg);
+        }
+
+        /* Sparkle */
+        .sparkle {
+            position: absolute;
+            color: #ffffff;
+            font-size: 23px;
+            font-weight: bold;
+        }
+
+        .sparkle.one {
+            left: -25px;
+            top: 5px;
+        }
+
+        .sparkle.two {
+            right: -28px;
+            bottom: 5px;
+            font-size: 18px;
+        }
+
+        .logo h2 {
+            font-size: 42px;
+            margin: 0;
+            color: #d86b91;
+            font-family: Georgia, serif;
+            letter-spacing: 2px;
+        }
+
+        .logo p {
+            margin-top: 7px;
+            font-size: 15px;
+            color: #8d6575;
+            font-style: italic;
+        }
+
+        .nama {
+            margin-top: 12px;
+            color: #704656;
+            font-family: Georgia, serif;
+            font-size: 19px;
+        }
+
+        /* =========================
+           NAVIGASI
+        ========================= */
+
+        nav {
+            text-align: center;
+            margin: 30px 0 45px;
+            padding: 15px;
+            background: rgba(255,255,255,0.65);
+            border-radius: 25px;
+        }
+
+        nav a {
+            color: #a94f73;
+            font-size: 16px;
+            font-weight: bold;
+            text-decoration: none;
+            margin: 0 9px;
+        }
+
+        nav a:hover {
+            color: #d86b91;
+        }
+
+        /* =========================
+           JUDUL
+        ========================= */
+
+        h1 {
+            text-align: center;
+            font-family: Georgia, serif;
+            font-size: 38px;
+            line-height: 1.3;
+            color: #704656;
+            margin-bottom: 15px;
+        }
+
+        .deskripsi {
+            text-align: center;
+            font-size: 17px;
+            line-height: 1.8;
+            color: #765d67;
+            margin: 0 auto 30px;
+            max-width: 570px;
+        }
+
+        /* =========================
+           CARD
+        ========================= */
+
+        .card {
+            background: rgba(255, 255, 255, 0.75);
+            padding: 25px;
+            margin-top: 20px;
+            border-radius: 20px;
+            box-shadow: 0 5px 15px rgba(180, 110, 140, 0.12);
+        }
+
+        .card h3 {
+            text-align: center;
+            color: #c55f86;
+            font-family: Georgia, serif;
+            font-size: 25px;
+            margin-top: 0;
+        }
+
+        .card p {
+            text-align: center;
+            line-height: 1.7;
+            color: #765d67;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 45px;
+            padding: 20px;
+            color: #9b7180;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- LOGO -->
+    <header class="logo">
+
+        <div class="mochi-logo">
+
+            <div class="leaf"></div>
+
+            <span class="sparkle one">✦</span>
+            <span class="sparkle two">✧</span>
+
+            <div class="blush left"></div>
+            <div class="blush right"></div>
+
+            <div class="mouth"></div>
+
+        </div>
+
+        <h2>♡ Mochi Sweety ♡</h2>
+
+        <p>
+            Sweet little things, made with love.
+        </p>
+
+        <div class="nama">
+            ✿ EVA FEBRIYANTI ✿
+        </div>
+
+    </header>
+
+
+    <!-- MENU -->
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#menu">Menu</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+
+    <!-- HOME -->
+    <section id="home">
+
+        <h1>
+            Welcome to Mochi Sweety ♡
+        </h1>
+
+        <p class="deskripsi">
+            Selamat datang di Mochi Sweety, tempat kecil yang
+            penuh dengan kelembutan, rasa manis, dan suasana
+            aesthetic. Nikmati mochi lembut dengan berbagai
+            rasa yang dibuat dengan penuh cinta.
+        </p>
+
+    </section>
+
+
+    <!-- ABOUT -->
+    <section id="about" class="card">
+
+        <h3>♡ Tentang Kami ♡</h3>
+
+        <p>
+            Mochi Sweety hadir untuk memberikan pengalaman
+            menikmati mochi yang lembut, manis, dan menyenangkan.
+            Setiap mochi dibuat dengan sentuhan cute, sederhana,
+            dan penuh kasih.
+        </p>
+
+    </section>
+
+
+    <!-- MENU -->
+    <section id="menu" class="card">
+
+        <h3>♡ Menu Mochi ♡</h3>
+
+        <p>
+            🍓 Strawberry Mochi<br>
+            🍫 Chocolate Mochi<br>
+            🧀 Cheese Mochi<br>
+            🍵 Matcha Mochi<br>
+            🥛 Milk Mochi
+        </p>
+
+    </section>
+
+
+    <!-- CONTACT -->
+    <section id="contact" class="card">
+
+        <h3>♡ Contact ♡</h3>
+
+        <p>
+            Yuk, nikmati manisnya Mochi Sweety bersama
+            orang-orang tersayang. ♡
+        </p>
+
+    </section>
+
+
+    <footer>
+        © 2026 Mochi Sweety — Made with ♡ by [eva febriyanti]
+    </footer>
+
+</div>
+
+</body>
+</html>
